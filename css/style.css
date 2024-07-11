@@ -1,92 +1,53 @@
-body {
-  font-family: "Comfortaa", cursive;
-  background-color: #272b30;
-  color: white;
+body{
+    background-color: #0D0D0D;
+    color: #f9f6f6 !important;
+    overflow: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Nerko One", cursive;
-  color: white !important;
+.nav-tab{
+    background-color: #0D0D0D;
 }
 
-a,
-p,
-span {
-  color: white !important;
+.logo{
+    width: 50px;
 }
 
-header img {
-  max-height: 30vh;
-  object-fit: cover;
+i{
+    cursor: pointer;
 }
 
-.nav-item .nav-link.active,
-.nav-item .nav-link:hover {
-  color: #09c !important;
-  transition: color 0.5s;
+.meal-layer{
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6f6ca;
+    top: 100%;
+    transition: .5s;
 }
 
-.game-cards .card {
-  filter: grayscale(0.7);
-  transition: transform 0.5s, filter 0.5s 0.1s;
+.meal:hover .meal-layer{
+    top: 0;
 }
 
-.game-cards .card:hover {
-  transform: scale(1.05);
-  filter: grayscale(0);
+.side-nav-menu{
+    z-index: 99;
 }
 
-nav {
-  background-color: rgb(58, 73, 123) !important;
-  margin-inline: auto;
-  margin-top: -50px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+.cursor-pointer{
+    cursor: pointer;
 }
 
-.details {
-  background-color: #272729be;
+.alert{
+    width: fit-content;
 }
 
-.loading {
-  position: fixed;
-  z-index: 9999;
-  inset: 0;
-  background-color: #272b30e3;
+.loading-screen{
+    z-index: 999;
+    display: flex;
 }
-.loader {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: inline-block;
-  border-top: 4px solid #fff;
-  border-right: 4px solid transparent;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite;
-}
-.loader::after {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border-left: 4px solid #ff3d00;
-  border-bottom: 4px solid transparent;
-  animation: rotation 0.5s linear infinite reverse;
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+
+.inner-loading-screen{
+    position: absolute;
+    z-index: 9;
+    background-color: #0D0D0D;
+    display: flex;
 }
